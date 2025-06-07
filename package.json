@@ -1,0 +1,126 @@
+{
+  "name": "healthy-developer",
+  "displayName": "Healthy Developer",
+  "description": "VS Code extension to help developers stay healthy with reminders.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:healthyDeveloperView"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "healthyDeveloper",
+          "title": "Healthy Developer",
+          "icon": "resources/meal-plan-svgrepo-com.svg"
+        }
+      ]
+    },
+    "views": {
+      "healthyDeveloper": [
+        {
+          "id": "healthyDeveloperView",
+          "name": "Reminders"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "healthy-developer.pauseReminder",
+        "title": "⏸️ Pause",
+        "category": "Healthy Developer"
+      },
+      {
+        "command": "healthy-developer.resumeReminder",
+        "title": "▶️ Resume",
+        "category": "Healthy Developer"
+      },
+      {
+        "command": "healthy-developer.addReminder",
+        "title": "Add Reminder",
+        "category": "Healthy Developer",
+          "icon": {
+            "light": "resources/add-to-svgrepo-com.svg",
+            "dark": "resources/add-to-svgrepo-com.svg"
+          }
+        },
+        {
+          "command": "healthy-developer.editReminderInterval",
+          "title": "⏱️ Edit Interval",
+          "category": "Healthy Developer"
+        },
+        {
+          "command": "healthy-developer.deleteReminder",
+          "title": "🗑️ Delete",
+          "category": "Healthy Developer"
+        },
+        {
+          "command": "healthy-developer.restoreDefaults",
+          "title": "Restore Default Reminders",
+          "category": "Healthy Developer"
+        }
+      ],
+      "menus": {
+        "view/item/context": [
+          {
+            "command": "healthy-developer.pauseReminder",
+            "when": "view == healthyDeveloperView && viewItem == activeReminder",
+            "group": "inline"
+          },
+          {
+            "command": "healthy-developer.resumeReminder",
+            "when": "view == healthyDeveloperView && viewItem == pausedReminder",
+            "group": "inline"
+          },
+          {
+            "command": "healthy-developer.editReminderInterval",
+            "when": "view == healthyDeveloperView",
+            "group": "inline"
+          },
+          {
+            "command": "healthy-developer.deleteReminder",
+            "when": "view == healthyDeveloperView",
+            "group": "inline"
+          }
+        ],
+        "view/title": [
+          {
+            "command": "healthy-developer.addReminder",
+            "when": "view == healthyDeveloperView",
+            "group": "navigation"
+          },
+          {
+            "command": "healthy-developer.restoreDefaults",
+            "when": "view == healthyDeveloperView",
+            "group": "overflow@2"
+          }
+        ]
+      }
+    },
+    "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile && npm run lint",
+      "lint": "eslint src",
+      "test": "vscode-test"
+    },
+    "devDependencies": {
+      "@types/vscode": "^1.100.0",
+      "@types/mocha": "^10.0.10",
+      "@types/node": "20.x",
+      "@typescript-eslint/eslint-plugin": "^8.31.1",
+      "@typescript-eslint/parser": "^8.31.1",
+      "eslint": "^9.25.1",
+      "typescript": "^5.8.3",
+      "@vscode/test-cli": "^0.0.10",
+      "@vscode/test-electron": "^2.5.2"
+    }
+  }
