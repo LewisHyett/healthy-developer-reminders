@@ -9,6 +9,15 @@
   "categories": [
     "Other"
   ],
+  "publisher": "LewisHyett",
+  "bugs": {
+		"email": "lewishyett467@gmail.com",
+		"url": "https://github.com/LewisHyett/healthy-developer-reminders/issues"
+	},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LewisHyett/healthy-developer-reminders"
+  },
   "activationEvents": [
     "onView:healthyDeveloperView"
   ],

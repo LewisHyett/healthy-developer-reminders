@@ -8,5 +8,5 @@ export type Reminder = {
 export const DEFAULT_REMINDERS: Reminder[] = [
     { label: 'Drink Water', interval: 60, paused: false },
     { label: 'Stretch your legs', interval: 60, paused: false },
-    { label: 'Look away from your screen', interval: 120, paused: false }
+    { label: 'Look away from your screen', interval: 20, paused: false }
 ];

@@ -12,7 +12,7 @@
 - **Default Reminders:**  
   - Drink Water (every 60 minutes)
   - Stretch your legs (every 60 minutes)
-  - Look away from your screen (every 120 minutes)
+  - Look away from your screen (every 20 minutes)
 
 - **Custom Reminders:**  
   Add your own reminders with custom labels and intervals.
