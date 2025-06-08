@@ -1,71 +1,88 @@
-# healthy-developer README
+# Healthy Developer
 
-This is the README for your extension "healthy-developer". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+**Healthy Developer** is a Visual Studio Code extension designed to help you maintain healthy work habits by providing customizable reminders directly in your editor.
 
 ---
 
-## Following extension guidelines
+## Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- **Activity Bar Integration:**  
+  Access all reminders from the dedicated "Healthy Developer" activity bar icon.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+- **Default Reminders:**  
+  - Drink Water (every 60 minutes)
+  - Stretch your legs (every 60 minutes)
+  - Look away from your screen (every 120 minutes)
 
-## Working with Markdown
+- **Custom Reminders:**  
+  Add your own reminders with custom labels and intervals.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+- **Pause/Resume Reminders:**  
+  Temporarily pause or resume any reminder.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+- **Edit Reminder Interval:**  
+  Change how often a reminder notifies you.
 
-## For more information
+- **Delete Reminders:**  
+  Remove reminders you no longer need.
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- **Restore Defaults:**  
+  Quickly reset all reminders to the default set.
 
-**Enjoy!**
+- **Persistence:**  
+  All reminders and their states are saved between VS Code sessions.
+
+---
+
+## Usage
+
+1. **Open the Activity Bar:**  
+   Click the Healthy Developer icon in the activity bar.
+
+2. **View Reminders:**  
+   See all active and paused reminders in the Reminders view.
+
+3. **Add a Reminder:**  
+   - Click the three-dots (•••) menu in the Reminders view and select "Add Reminder".
+   - Enter a label and interval (in minutes).
+
+4. **Pause/Resume a Reminder:**  
+   - Right-click a reminder and choose "Pause Reminder" or "Resume Reminder".
+
+5. **Edit Reminder Interval:**  
+   - Right-click a reminder and select "Edit Reminder Interval".
+
+6. **Delete a Reminder:**  
+   - Right-click a reminder and select "Delete Reminder".
+
+7. **Restore Default Reminders:**  
+   - Click the three-dots (•••) menu and select "Restore Default Reminders".
+
+---
+
+## Extension Settings
+
+This extension does not add any custom settings (yet). All reminders are managed through the activity bar UI.
+
+---
+
+## Contributing
+
+Pull requests and suggestions are welcome!  
+If you find a bug or have a feature request, please open an issue.
+
+---
+
+## License
+
+[MIT](LICENSE)
+
+---
+
+## Credits
+
+- Activity bar and menu icons from [SVG Repo](https://www.svgrepo.com/) and [VS Code Codicons](https://microsoft.github.io/vscode-codicons/dist/codicon.html).
+
+---
+
+Stay healthy and productive!
